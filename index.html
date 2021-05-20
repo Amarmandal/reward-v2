@@ -23,15 +23,15 @@
                 <legend>Sex</legend>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label" for="p-male">Male</label>
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="p-male" value="male" checked>
+                    <input class="form-check-input" type="radio" name="sex" id="p-male" value="male" checked>
                   </div>
                   <div class="form-check form-check-inline">
                     <label class="form-check-label" for="p-female">Female</label>
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="p-female" value="female">
+                    <input class="form-check-input" type="radio" name="sex" id="p-female" value="female">
                   </div>
                   <div class="form-check form-check-inline">
                     <label class="form-check-label" for="p-other">Others</label>
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="p-other" value="others">
+                    <input class="form-check-input" type="radio" name="sex" id="p-other" value="others">
                   </div>
             </fieldset>
             <div class="form-group">
@@ -167,22 +167,90 @@
                     <label class="lead">Do you Smoke?</label>
                     <div class="form-check form-check-inline">
                         <label class="form-check-label" for="ps-no">Not at All</label>
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ps-no" value="not at all" checked>
+                        <input class="form-check-input" type="radio" name="smoke" id="ps-no" value="not at all" checked onclick="clickedNo(this)">
                       </div>
                       <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="ps-some">Some Days</label>
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ps-some" value="Some days">
+                        <label for="choice-yes" class="form-check-label" for="ps-some">Some Days</label>
+                        <input class="form-check-input" type="radio" name="smoke" id="ps-some" value="Some days" onclick="clickedYes(this)">
                       </div>
                       <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="ps-every">Every Days</label>
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ps-every" value="Everydays">
+                        <label for="choice-yes" class="form-check-label" for="ps-every">Every Days</label>
+                        <input class="form-check-input" type="radio" name="smoke" id="ps-every" value="Everydays" onclick="clickedYes(this)">
                       </div>
                 </div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
-                <div class="form-group"></div>
+                <div class="form-group" id="App">
+                    <label>How many sticks per day?</label>
+                    <input class="form-control" type="decimal" name="noOfSticks" id="p-sticks" />
+                </div>
+                <div class="form-group">
+                    <label class="lead">Do you currently drink alcohol?</label>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="ps-yes">Yes</label>
+                        <input class="form-check-input" type="radio" name="drink" id="ps-yes" value="yes" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="choice-yes" class="form-check-label" for="ps-some">No</label>
+                        <input class="form-check-input" type="radio" name="drink" id="ps-no" value="No">
+                      </div>
+                      
+                </div>
+                <div class="form-group">
+                    <label> How many times in past one month?</label>
+                    <input class="form-control" type="decimal" name="alcoholAmount" id="p-alcohol" />
+                </div>
+            </fieldset>
+
+            <!-- Health and medication status -->
+            <fieldset class="form-group2">
+                <legend>Health and medication status</legend>
+                <div class="form-group">
+                    <label class="lead">Do you have any comorbid conditions?</label>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" >Yes</label>
+                        <input class="form-check-input" type="radio" name="comorbid" id="ps-yes" value="yes" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">No</label>
+                        <input class="form-check-input" type="radio" name="comorbid" id="ps-no" value="No">
+                      </div>
+                    
+                </div>
+                <div class="form-group">
+                    <h6>Specify comorbid condition</h6>
+                    <input type="checkbox" id="Diabetes" name="Diabetes" value="Diabetes">
+                    <label for="Diabetes"> Diabetes</label><br>
+                    <input type="checkbox" id="Hypertension" name="Hypertension" value="Hypertension">
+                    <label for="Hypertension">Hypertension</label><br>
+                    <input type="checkbox" id="Renal" name="Renal" value="Renal">
+                    <label for="Renal">Renal</label><br>
+                    <input type="checkbox" id="Gastro-intestinal" name="Gastro-intestinal" value="Gastro-intestinal">
+                    <label for="Gastro-intestinal"> Gastro-intestinal</label><br>
+                    <input type="checkbox" id="Hepatobiliary" name="Hepatobiliary" value="Hepatobiliary">
+                    <label for="Hepatobiliary">Hepatobiliary</label><br>
+                    <input type="checkbox" id="Thyroid" name="Thyroid" value="Thyroid">
+                    <label for="Thyroid">Thyroid</label><br>
+
+                    <input type="checkbox" id="Pregnancy" name="Pregnancy" value="Pregnancy">
+                    <label for="Pregnancy"> Pregnancy</label><br>
+                    <input type="checkbox" id="Other" name="Other" value="Other">
+                    <label for="Other">Other</label><br>
+                    <input type="text" class="form-control" id="f-other" placeholder="Specify your condition"/>  
+                    <input type="checkbox" id="None" name="None" value="None">
+                    <label for="None">None</label>
+                    
+                </div>
+                <div class="form-group">
+                    
+                </div>
+                      
+                </div>
+                <div class="form-group">
+                    
+                </div>
             </fieldset>
         </form>
     </div>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+.reveal-if-smoke {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+#App{
+    visibility: hidden;
+}
