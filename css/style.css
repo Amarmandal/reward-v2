@@ -4,7 +4,6 @@
     overflow: hidden;
   }
 
-#App{
-    display: none;
-  
+#smoke, #drink, #specifyComorbid, #hospitalized, #dateOfHospitalization, #symptoms, #mildSymptoms, #severeSymptoms, #whichMedication, #herbalMed, #allopathicDrug, #otherMed{
+    display: none; 
 }
