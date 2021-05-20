@@ -1,0 +1,501 @@
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADS Score</title>
+</head>
+
+<body>
+    <div class="test-content">
+        <h1>HADS Quiz: Hospital Anxiety and Depression Scale
+
+            <!-- adaptable_top_336x280_to_320x100 -->
+            <style>
+                .adaptable_top_336x280_to_320x100 {
+                    width: 300px;
+                    height: 250px;
+                }
+
+                @media(min-width: 500px) {
+                    .adaptable_top_336x280_to_320x100 {
+                        width: 336px;
+                        height: 280px;
+                    }
+                }
+
+                -->
+            </style>
+
+    </div>
+    <p></p>
+
+    <form method="post" action="free-anxiety-depression-test-results.php">
+        <div class="row">
+            <div class="col">
+                <h4>A<sub>1</sub></h4>
+                <p class="question">I feel tense or 'wound up': <br> म आफूलाई तनावमा पाउँछुः</p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="3" type="radio" name="answer_A">
+                            </td>
+                            <td width="397">Most of the time (प्रायःजसो)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_A">
+                            </td>
+                            <td>A lot of the time (धेरै पटक)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_A">
+                            </td>
+                            <td>From time to time, occasionally (समय समयमा)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="0" type="radio" name="answer_A">
+                            </td>
+                            <td>Not at all (कहिल्येैे पनि हुन्नँ)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="question"><br> </p>
+            <div class="col">
+
+                <h4>D<sub>1</sub></h4>
+                <p class="question">I still enjoy the things I used to enjoy: <br> म अझै पनि आफूलाई मन पर्ने चीजमा खुशी
+                    पाउँछुः
+                </p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="0" type="radio" name="answer_B">
+                            </td>
+                            <td width="389">Definitely as much (पक्कै पनि धेरै पटक)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_B">
+                            </td>
+                            <td>Not quite so much (त्यत्ति धैरे होइन)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_B">
+                            </td>
+                            <td>Only a little (अलि अलि)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="3" type="radio" name="answer_B">
+                            </td>
+                            <td>Hardly at all (कहिल्यै पनि हुन्नँ/बिरलै)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="question"><br> </p>
+                <h4>A<sub>2</sub></h4>
+                <p class="question">I get a sort of frightened feeling as if something awful is about to
+                    happen: <br> म केही डरलाग्दो घटना घट्ला कि भनेर डराउँछुः</p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="3" type="radio" name="answer_C">
+                            </td>
+                            <td width="394">Very definitely and quite badly (एकदमै नराम्रो सँग)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_C">
+                            </td>
+                            <td><span class="question">Yes, but not too badly (हो, तर त्यति नराम्रोसँग होइन)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_C">
+                            </td>
+                            <td><span class="question">A little, but it doesn't worry me (अलि अलि तर त्यत्ति चिन्तित
+                                    गराउँदैन)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="0" type="radio" name="answer_C">
+                            </td>
+                            <td><span class="question">Not at all (पटक्कै लाग्दैन)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <p class="question"><br> </p>
+
+                <h4>D<sub>2</sub></h4>
+                <p class="question">I can laugh and see the funny side of things: <br> म कुनै पनि कुराको रमाइलो पक्षलाई
+                    देखेर
+                    हाँस्न सक्छुः</p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="0" type="radio" name="answer_D">
+                            </td>
+                            <td width="389"><span class="question">As much as I always could (पहिले जत्ति नै)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_D">
+                            </td>
+                            <td><span class="question">Not quite so much now (अहिले त्यत्ति धेरै होइन)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_D">
+                            </td>
+                            <td><span class="question">Definitely not so much now (पक्कै तर पहिले जस्तो होइन)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="3" type="radio" name="answer_D">
+                            </td>
+                            <td><span class="question">Not at all (हुँदै हुन्नँ)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="question"><br> </p>
+                <h4>A<sub>3</sub></h4>
+                <p class="question">Worrying thoughts go through my mind: <br>चिन्ताजनक विचारहरु मेरो दिमागमा आउँछन्ः
+                </p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="3" type="radio" name="answer_E">
+                            </td>
+                            <td width="389"><span class="question">A great deal of the time (अत्यधिक मात्रामा)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_E">
+                            </td>
+                            <td><span class="question">A lot of the time (धेरैजसो)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_E">
+                            </td>
+                            <td><span class="question">From time to time, but not too often (कहिलेकाहीं तर त्यति धेरै
+                                    आउँदैन)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="0" type="radio" name="answer_E">
+                            </td>
+                            <td><span class="question">Only occasionally (बिरलै)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <p class="question"><br> </p>
+                <h4>D<sub>3</sub></h4>
+                <p class="question"> I feel cheerful: <br>म आफूलाई सन्तुष्ट अनुभव गरिरहेको छुः </p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="3" type="radio" name="answer_F">
+                            </td>
+                            <td width="389"><span class="question">Not at all (कहिल्यै पनि हुन्नँ)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_F">
+                            </td>
+                            <td><span class="question">Not often (प्रायः हुन्नँ)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_F">
+                            </td>
+                            <td><span class="question">Sometimes (कहिलेकाहीं)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="0" type="radio" name="answer_F">
+                            </td>
+                            <td><span class="question">Most of the time (धेरैजसो समय)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="question"><br> </p>
+                <h4>A<sub>4</sub></h4>
+                <p class="question"> I can sit at ease and feel relaxed: <br>म ढुक्क एवं निश्चिन्त बस्न सक्छुः</p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="0" type="radio" name="answer_G">
+                            </td>
+                            <td width="389"><span class="question">Definitely (पक्कै पनि/अवश्य)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_G">
+                            </td>
+                            <td><span class="question">Usually (प्रायःजसो)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_G">
+                            </td>
+                            <td><span class="question">Not often (कहिलेकाहीं)</span></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="3" type="radio" name="answer_G">
+                            </td>
+                            <td><span class="question">Not at all (हुँदै हुन्नँ)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <p class="question"><br> </p>
+                <h4>D<sub>4</sub></h4>
+                <p class="question">I feel as if I am slowed down: <br>म शिथिल भएको महसुस गर्दछुः</p>
+                <table class="answer">
+                    <tbody>
+                        <tr>
+                            <td width="20" valign="top"><input class="radio" value="3" type="radio" name="answer_H">
+                            </td>
+                            <td width="391">Nearly all the time (प्रायः सँधैजसो समय)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="2" type="radio" name="answer_H">
+                            </td>
+                            <td>Very often (बारम्बार)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="1" type="radio" name="answer_H">
+                            </td>
+                            <td>Sometimes (कहिलेकाहीं)</td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><input class="radio" value="0" type="radio" name="answer_H">
+                            </td>
+                            <td>Not at all (कहिल्यै पनि हुन्नँ)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="question"><br></p>
+                    <h4>A<sub>5</sub></h4>
+                    <p class="question">I get a sort of frightened feeling like 'butterflies' in the stomach:
+                        <br>म डर लागेजस्तो भएर मन सिरिङ्ग गरिरहेको अनुभव गर्दछुः
+                    </p>
+                    <table class="answer">
+                        <tbody>
+                            <tr>
+                                <td width="20" valign="top"><input class="radio" value="0" type="radio" name="answer_I">
+                                </td>
+                                <td width="389"><span class="question">Not at all (कहिल्यै पनि होइन)</span></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><input class="radio" value="1" type="radio" name="answer_I">
+                                </td>
+                                <td><span class="question">Occasionally (कहिलेकाहीं)</span></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><input class="radio" value="2" type="radio" name="answer_I">
+                                </td>
+                                <td><span class="question">Quite Often (अत्यधिक मात्रामा)</span></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><input class="radio" value="3" type="radio" name="answer_I">
+                                </td>
+                                <td><span class="question">Very Often (सँधैजसो)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <p class="question"><br> </p>
+                    <h4>D<sub>5</sub></h4>
+                    <p class="question">I have lost interest in my appearance: <br>मेरो आफ्नो रंगरुपमा रुचि घटिरहेको छः
+                    </p>
+                    <table class="answer">
+                        <tbody>
+                            <tr>
+                                <td width="20" valign="top"><input class="radio" value="3" type="radio" name="answer_J">
+                                </td>
+                                <td width="388"><span class="question">Definitely (अवश्य नै)</span></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><input class="radio" value="2" type="radio" name="answer_J">
+                                </td>
+                                <td><span class="question">I don't take as much care as I should (जति लिनुपर्ने हो त्यति
+                                        लिन्नँ)</span></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><input class="radio" value="1" type="radio" name="answer_J">
+                                </td>
+                                <td><span class="question">I may not take quite as much care (त्यत्ति रुचि नदिन
+                                        सक्छु)</span></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><input class="radio" value="0" type="radio" name="answer_J">
+                                </td>
+                                <td><span class="question">I take just as much care as ever (पहिले जस्तै चासो
+                                        राख्छु)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="question"><br> </p>
+                        <h4>A<sub>6</sub></h4>
+                        <p class="question">I feel restless as I have to be on the move: <br>म सँधै छटपटी/अशान्त जस्तो
+                            अनुभव
+                            गर्दछुः</p>
+                        <table class="answer">
+                            <tbody>
+                                <tr>
+                                    <td width="20" valign="top"><input class="radio" value="3" type="radio"
+                                            name="answer_K">
+                                    </td>
+                                    <td width="387"><span class="question">Very much indeed (वास्तवमा धेरै नै)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="2" type="radio" name="answer_K">
+                                    </td>
+                                    <td><span class="question">Quite a lot (अलि बढी)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="1" type="radio" name="answer_K">
+                                    </td>
+                                    <td><span class="question">Not very much (त्यत्ति बढी होइन)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="0" type="radio" name="answer_K">
+                                    </td>
+                                    <td><span class="question">Not at all (हुँदै होइन)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <p class="question"><br> </p>
+                        <h4>D<sub>6</sub></h4>
+                        <p class="question">I look forward with enjoyment to things: <br>म जहिले पनि रमाइलो गर्न
+                            मनोरञ्जनको
+                            प्रतीक्षामा
+                            हुन्छुः</p>
+                        <table class="answer">
+                            <tbody>
+                                <tr>
+                                    <td width="20" valign="top"><input class="radio" value="0" type="radio"
+                                            name="answer_L">
+                                    </td>
+                                    <td width="393">As much as I ever did (पहिले जस्तो नै)</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="1" type="radio" name="answer_L">
+                                    </td>
+                                    <td>Rather less than I used to (पहिले भन्दा अलि कम)</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="2" type="radio" name="answer_L">
+                                    </td>
+                                    <td>Definitely less than I used to (पक्कै पनि पहिले भन्दा थोरै)</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="3" type="radio" name="answer_L">
+                                    </td>
+                                    <td>Hardly at all (कहिल्यै पनि होइन)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="question"><br> </p>
+                        <h4>A<sub>7</sub></h4>
+                        <p class="question"> I get sudden feelings of panic: <br>म कहिलेकाहीं एकदमै अत्तालिन्छुः</p>
+                        <table class="answer">
+                            <tbody>
+                                <tr>
+                                    <td width="20" valign="top"><input class="radio" value="3" type="radio"
+                                            name="answer_M">
+                                    </td>
+                                    <td width="389"><span class="question">Very often indeed (वास्तवमा धेरै नै)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="2" type="radio" name="answer_M">
+                                    </td>
+                                    <td><span class="question">Quite often (प्रायः जसो)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="1" type="radio" name="answer_M">
+                                    </td>
+                                    <td><span class="question">Not very often (त्यति धेरै होइन)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="0" type="radio" name="answer_M">
+                                    </td>
+                                    <td><span class="question">Not at all (हुँदै होइन)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <p class="question"><br> </p>
+                        <h4>D<sub>7</sub></h4>
+                        <p class="question">I can enjoy a good book or radio or TV program:
+                            <br>म गफगाफ, रेडियो, किताब, टि.भी, भिडियोजस्ता कार्यक्रममा रमाउँछुः
+                        </p>
+                        <table class="answer">
+                            <tbody>
+                                <tr>
+                                    <td width="20" valign="top"><input class="radio" value="0" type="radio"
+                                            name="answer_N">
+                                    </td>
+                                    <td width="389"><span class="question">Often (प्रायः)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="1" type="radio" name="answer_N">
+                                    </td>
+                                    <td><span class="question">Sometimes (कहिलेकाहीं)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="2" type="radio" name="answer_N">
+                                    </td>
+                                    <td><span class="question">Not often (त्यत्ति धेरै होइन)</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><input class="radio" value="3" type="radio" name="answer_N">
+                                    </td>
+                                    <td><span class="question">Very seldom (बिरलै)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <p class="question"><br> </p>
+                <div class="btn_next">
+                
+                    <p align = "left"> <input name="submitbutton" type="submit" id="submitbutton2" value="Submit"> </p>
+               
+                </div>
+    </form>
+    </div>
+</body>
+
+</html>

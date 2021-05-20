@@ -7,6 +7,12 @@
     <title>Reward</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="jquery.js"></script> 
+    <script> 
+        $(function(){
+          $("#includedContent").load("HADS.html"); 
+        });
+    </script> 
 </head>
 <body>
     <div class="container">
@@ -170,11 +176,11 @@
                         <input class="form-check-input" type="radio" name="smoke" id="ps-no" value="not at all" checked onclick="clickedNo(this)">
                       </div>
                       <div class="form-check form-check-inline">
-                        <label for="choice-yes" class="form-check-label" for="ps-some">Some Days</label>
+                        <label class="form-check-label" for="ps-some">Some Days</label>
                         <input class="form-check-input" type="radio" name="smoke" id="ps-some" value="Some days" onclick="clickedYes(this)">
                       </div>
                       <div class="form-check form-check-inline">
-                        <label for="choice-yes" class="form-check-label" for="ps-every">Every Days</label>
+                        <label class="form-check-label" for="ps-every">Every Days</label>
                         <input class="form-check-input" type="radio" name="smoke" id="ps-every" value="Everydays" onclick="clickedYes(this)">
                       </div>
                 </div>
@@ -185,18 +191,18 @@
                 <div class="form-group">
                     <label class="lead">Do you currently drink alcohol?</label>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="ps-yes">Yes</label>
-                        <input class="form-check-input" type="radio" name="drink" id="ps-yes" value="yes" checked>
+                        <label class="form-check-label" for="pd-yes">Yes</label>
+                        <input class="form-check-input" type="radio" name="drink" id="pd-yes" value="yes" checked>
                       </div>
                       <div class="form-check form-check-inline">
-                        <label for="choice-yes" class="form-check-label" for="ps-some">No</label>
-                        <input class="form-check-input" type="radio" name="drink" id="ps-no" value="No">
+                        <label class="form-check-label" for="pd-no">No</label>
+                        <input class="form-check-input" type="radio" name="drink" id="pd-no" value="no">
                       </div>
                       
                 </div>
                 <div class="form-group">
                     <label> How many times in past one month?</label>
-                    <input class="form-control" type="decimal" name="alcoholAmount" id="p-alcohol" />
+                    <input class="form-control" type="decimal" name="alcoholAmount" id="pm-alcohol" />
                 </div>
             </fieldset>
 
@@ -206,12 +212,12 @@
                 <div class="form-group">
                     <label class="lead">Do you have any comorbid conditions?</label>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label" >Yes</label>
-                        <input class="form-check-input" type="radio" name="comorbid" id="ps-yes" value="yes" checked>
+                        <label for="cc-yes" class="form-check-label" >Yes</label>
+                        <input class="form-check-input" type="radio" name="comorbid" id="cc-yes" value="yes" checked>
                       </div>
                       <div class="form-check form-check-inline">
-                        <label class="form-check-label">No</label>
-                        <input class="form-check-input" type="radio" name="comorbid" id="ps-no" value="No">
+                        <label for="cc-no" class="form-check-label">No</label>
+                        <input class="form-check-input" type="radio" name="comorbid" id="cc-no" value="No">
                       </div>
                     
                 </div>
@@ -240,13 +246,194 @@
                     
                 </div>
                 <div class="form-group">
-                    
+                    <label class="lead">Are you in home isolation?</label>
+                    <div class="form-check form-check-inline">
+                        <label for="hi-yes" class="form-check-label" >Yes</label>
+                        <input class="form-check-input" type="radio" name="home" id="hi-yes" value="yes" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="hi-no" class="form-check-label">No</label>
+                        <input class="form-check-input" type="radio" name="home" id="hi-no" value="No">
+                      </div>
                 </div>
                       
+                
+                <div class="form-group">
+                    <label class="lead">Are you hospitalized?</label>
+                    <div class="form-check form-check-inline">
+                        <label for="h-yes" class="form-check-label" >Yes</label>
+                        <input class="form-check-input" type="radio" name="hospitalized" id="h-yes" value="yes" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="h-no" class="form-check-label">No</label>
+                        <input class="form-check-input" type="radio" name="hospitalized" id="h-no" value="No">
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label for="d-hospitalized">Date of Hospitalization:</label>
+                    <input class="form-control" type="date" name="hospitalization-date" id="d-hospitalized"> 
+                </div>
+                <div class="form-group">
+                    <label class="lead">Are you having any symptoms?</label>
+                    <div class="form-check form-check-inline">
+                        <label for="sy-yes" class="form-check-label" >Yes</label>
+                        <input class="form-check-input" type="radio" name="symptoms" id="sy-yes" value="yes" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="sy-no" class="form-check-label">No</label>
+                        <input class="form-check-input" type="radio" name="symptoms" id="sy-no" value="No">
+                      </div>
+                </div>
+                <div class="form-group">
+                    <h6>What are the mild symptoms?</h6>
+                    <input type="checkbox" id="Feverish" name="Feverish" value="Feverish">
+                    <label for="Feverish"> Feverish</label><br>
+                    <input type="checkbox" id="Tiredness" name="Tiredness" value="Tiredness">
+                    <label for="Tiredness">Tiredness</label><br>
+                    <input type="checkbox" id="Dry-cough" name="Dry-cough" value="lDry-coughs">
+                    <label for="Dry-cough">Dry-cough</label><br>
+                    <input type="checkbox" id="anp" name="anp" value="anp">
+                    <label for="anp"> Aches and pains</label><br>
+
+                    <input type="checkbox" id="Diarrhoea" name="Diarrhoea" value="Diarrhoea">
+                    <label for="Diarrhoea"> Diarrhoea</label><br>
+                    <input type="checkbox" id="rec" name="rec" value="rec">
+                    <label for="rec"> Red eye(conjunctivitis)</label><br>
+                    <input type="checkbox" id="lot" name="lot" value="lot">
+                    <label for="lot"> Loss of taste</label><br>
+                    <input type="checkbox" id="los" name="los" value="los">
+                    <label for="los"> Loss of smell</label><br>
+                    <input type="checkbox" id="sr" name="sr" value="sr">
+                    <label for="sr"> Skin rash</label><br>
+                    <input type="checkbox" id="dt" name="dt" value="dt">
+                    <label for="dt"> Discolored toes/ fingers </label><br>
+
+                    <input type="checkbox" id="Myalgia" name="Myalgia" value="Myalgia">
+                    <label for="Myalgia"> Myalgia</label><br>
+                    
+                  
+                </div>
+                <div class="form-group">
+                    <h6>What are the severe symptoms?</h6>
+                    <input type="checkbox" id="dib" name="dib" value="dib">
+                    <label for="dib"> Difficulty in breathing</label><br>
+                    <input type="checkbox" id="cp" name="cp" value="cp">
+                    <label for="cp">Chest pain or pressure</label><br>
+                    <input type="checkbox" id="los" name="los" value="los">
+                    <label for="los">Loss of speech</label><br>
+                    <input type="checkbox" id="lom" name="lom" value="lom">
+                    <label for="lom"> Loss of movement</label><br>
+                    
+                    <input type="checkbox" id="Other" name="Other" value="Other">
+                    <label for="Other">Other</label><br>
+                    <input type="text" class="form-control" id="f-other" placeholder="Specify your symptoms"/>  
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="form-group3">
+                <legend>Vitals</legend>
+                <div class="form-group">
+                    <label for="Pulse">Pulse</label>
+                    <input class="form-control" type="number" name="Pulse" id="Pulse" />
+                </div>
+                <div class="form-group">
+                    <label>Blood Pressure</label>
+                    <input placeholder="Systolic" class="form-control" type="number" name="systolic" /><br>
+                    <input placeholder="Diastolic"  class="form-control" type="number" name="diastolic" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="temperature">Temperature</label>
+                    <input class="form-control" type="decimal" name="temperature" id="temperature" />
+                </div>
+                <div class="form-group">
+                    <label for="rs">Respiration Rate</label>
+                    <input class="form-control" type="number" name="rs" id="rs" />
+                </div>
+                <div class="form-group">
+                    <label for="os">Oxygen Saturation</label>
+                    <input placeholder="%" class="form-control" type="number" name="os" id="os" />
+                </div>
+                <div class="form-group">
+                    <label for="bs">Blood Sugar</label>
+                    <input class="form-control" type="number" name="bs" id="bs" />
+                </div>
+                <div id="includedContent">
+                    
+                </div>
+                <div class="form-group">
+                    <label class="lead">Are you taking Covid related medications?</label>
+                    <div class="form-check form-check-inline">
+                        <label for="crm-yes" class="form-check-label" >Yes</label>
+                        <input class="form-check-input" type="radio" name="crm" id="crm-yes" value="yes" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="crm-no" class="form-check-label">No</label>
+                        <input class="form-check-input" type="radio" name="crm" id="crm-no" value="No">
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label class="lead">Which one?</label>
+                    <div class="form-check form-check-inline">
+                        <label for="allopatic" class="form-check-label" >Allopatic</label>
+                        <input class="form-check-input" type="radio" name="whichm" id="allopatic" value="Allopatic" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="Herbal" class="form-check-label">Herbal</label>
+                        <input class="form-check-input" type="radio" name="whichm" id="Herbal" value="Herbal">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="oth" class="form-check-label">Other</label>
+                        <input class="form-check-input" type="radio" name="whichm" id="oth" value="Other">
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label for="mtnoa">Mention the name of the allopathic drugs taken</label><br>
+                    <input type="text" class="form-control" id="mtnoa" placeholder="Name"/>
+                </div>
+                <div class="form-group">
+                    <label for="mtnoh">Mention the name of the herbal medicine</label><br>
+                    <input type="text" class="form-control" id="mtnoh" placeholder="Name"/>
+                </div>
+                <div class="form-group">
+                    <label for="om">Please specify the other medicine</label><br>
+                    <input type="text" class="form-control" id="om" placeholder="Name"/>
+                </div>
+                <div class="form-group">
+                    <label class="lead">How often do you go outside to public places during your isolation?</label>
+                    <div class="form-check form-check-inline">
+                        <label for="travel-never" class="form-check-label" >Never</label>
+                        <input class="form-check-input" type="radio" name="travel" id="travel-never" value="travel-never" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="travel-rarely" class="form-check-label">Rarely</label>
+                        <input class="form-check-input" type="radio" name="travel" id="travel-rarely" value="travel-rarely">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="travel-sometimes" class="form-check-label">Sometimes</label>
+                        <input class="form-check-input" type="radio" name="travel" id="travel-sometimes" value="travel-sometimes">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="travel-most" class="form-check-label">Most of the times</label>
+                        <input class="form-check-input" type="radio" name="travel" id="travel-most" value="travel-most">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label for="travel-always" class="form-check-label">Always</label>
+                        <input class="form-check-input" type="radio" name="travel" id="travel-always" value="travel-always">
+                      </div>
                 </div>
                 <div class="form-group">
                     
                 </div>
+                <div class="form-group">
+                    
+                </div>
+                <div class="form-group">
+                    
+                </div>
+
+
             </fieldset>
         </form>
     </div>
