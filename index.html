@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="f-name">First Name</label>
+                <input type="text" class="form-control" id="f-name" placeholder="First Name"/>
+            </div>
+            <div class="form-group">
+                <label for="l-name">First Name</label>
+                <input type="text" class="form-control" id="l-name" placeholder="Last Name"/>
+            </div>
+            <fieldset class="form-group">
+                <legend>Sex</legend>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="p-male">Male</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="p-male" value="male" checked>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="p-female">Female</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="p-female" value="female">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="p-other">Others</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="p-other" value="others">
+                  </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="p-age">Age</label>
+                <input class="form-control" type="number" name="age" id="p-age" />
+            </div>
+            <fieldset class="form-group">
+                <legend>Address</legend>
+                <div class="form-group">
+                    <label for="district">District</label>
+                    <select class="form-control" id="district">
+                        <!-- Province 1 -->
+                        <option>Bhojpur</option>
+                        <option>Dhankuta</option>
+                        <option>Illam</option>
+                        <option>Jhapa</option>
+                        <option>Khotang</option>
+                        <option>Morang</option>
+                        <option>Okhaldhunga</option>
+                        <option>Panchthar</option>
+                        <option>Sankhuwasabha</option>
+                        <option>Solukhumbu</option>
+                        <option>Sunsari</option>
+                        <option>Taplejung</option>
+                        <option>Terhathum</option>
+                        <option>Udaypur</option>
+                        <!-- Province 2 -->
+                        <option>Bara</option>
+                        <option>Dhanusa</option>
+                        <option>Mahottari</option>
+                        <option>Parsa</option>
+                        <option>Rautahat</option>
+                        <option>Saptari</option>
+                        <option>Sarlahi</option>
+                        <option>Siraha</option>
+                        <!-- Province 3 -->
+                        <option>Bhaktapur</option>
+                        <option>Chitwan</option>
+                        <option>Dhading</option>
+                        <option>Dolakha</option>
+                        <option>Kathmandu</option>
+                        <option>Kavrepalanchok</option>
+                        <option>Lalitpur</option>
+                        <option>Makwanpur</option>
+                        <option>Nuwakot</option>
+                        <option>Ramechhap</option>
+                        <option>Rasuwa</option>
+                        <option>Sindhuli</option>
+                        <option>Sindhupalchok</option>
+                        <!-- Province 4 -->
+                        <option>Baglung</option>
+                        <option>Gorkha</option>
+                        <option>Kaski</option>
+                        <option>Lamjung</option>
+                        <option>Manang</option>
+                        <option>Mustang</option>
+                        <option>Myagdi</option>
+                        <option>Nawalpur</option>
+                        <option>Parbat</option>
+                        <option>Syangja</option>
+                        <option>Tanahun</option>
+                        <!-- Province 5 -->
+                        <option>Arghakhanchi</option>
+                        <option>Banke</option>
+                        <option>Bardiya</option>
+                        <option>Dang</option>
+                        <option>Eastern Rukum</option>
+                        <option>Gulmi</option>
+                        <option>Kapilvastu</option>
+                        <option>Palpa</option>
+                        <option>Parasi</option>
+                        <option>Pyuthan</option>
+                        <option>Rolpa</option>
+                        <option>Rupandehi</option>
+                        <!-- Province 6 -->
+                        <option>Dailekh</option>
+                        <option>Dolpa</option>
+                        <option>Humla</option>
+                        <option>Jajarkot</option>
+                        <option>Jumla</option>
+                        <option>Kalikot</option>
+                        <option>Mugu</option>
+                        <option>Salyan</option>
+                        <option>Surkhet</option>
+                        <option>Western Rukum</option>
+                        <!-- Province 7 -->
+                        <option>Achham</option>
+                        <option>Baitadi</option>
+                        <option>Bajhang</option>
+                        <option>Bajura</option>
+                        <option>Dadeldhura</option>
+                        <option>Darchula</option>
+                        <option>Doti</option>
+                        <option>Kailali</option>
+                        <option>Kanchanpur</option>
+                    </select>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="p-municipality">Municipality</label>
+                <select class="form-control" name="municipality" id="p-municipality">
+                    <option>Municipality</option>
+                    <option>Municipality</option>
+                    <option>Municipality</option>
+                    <option>Municipality</option>
+                    <option>Municipality</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="p-ward-no">Ward No</label>
+                <input class="form-control" type="number" name="ward-no" id="p-ward-no" />
+            </div>
+            <div class="form-group">
+                <label for="p-occupation">Occupation</label>
+                <select class="form-control" name="occupation" id="p-occupation">
+                    <option>Student</option>
+                    <option>Worker</option>
+                    <option>Occupation</option>
+                    <option>Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="d-swab-collection">Date of Swab Collection</label>
+                <input class="form-control" type="date" name="swab-collection-date" id="d-swab-collection">
+            </div>
+            <div class="form-group">
+                <label for="d-pcr-report">Date of PCR Report</label>
+                <input class="form-control" type="date" name="pcr-report-date" id="d-pcr-report">
+            </div>
+            <fieldset class="form-group">
+                <legend>Lifestyle Characteristics</legend>
+                <div class="form-group">
+                    <label class="lead">Do you Smoke?</label>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="ps-no">Not at All</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ps-no" value="not at all" checked>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="ps-some">Some Days</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ps-some" value="Some days">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="ps-every">Every Days</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ps-every" value="Everydays">
+                      </div>
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+                <div class="form-group"></div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
