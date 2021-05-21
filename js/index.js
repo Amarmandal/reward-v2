@@ -1,3 +1,6 @@
+const districtEle = document.getElementById('district');
+const municipalityOption = document.getElementById('p-municipality');
+
 function clickedRadio(x){
     if (x.value=="somedays" || x.value=="everyday" ){
         document.getElementById("smoke").style.display="block";
@@ -70,3 +73,31 @@ function clickedRadio(x){
     }
     
 }
+
+const municipalityDetails = {
+    morang: ['Biratnagar', 'Tanki', 'Test-1', 'Test-2', 'Test-4'],
+    kavrepalanchok: ['Dhulikhel', 'Banepa', 'Test-11', 'Test-22']
+}
+
+districtEle.addEventListener('click', (e) => {
+    const selectedDistrict = e.target.value.toLowerCase();
+    switch(selectedDistrict){
+        case 'morang':
+            let morangMunicipality = '';
+
+            municipalityDetails['morang'].map(item => {
+                morangMunicipality += `<option>${item}</option>`
+            })
+
+            municipalityOption.innerHTML = morangMunicipality;
+            break;
+        case 'kavrepalanchok':
+            let kavreMunicipality = '';
+
+            municipalityDetails['kavrepalanchok'].map(item => {
+                kavreMunicipality += `<option>${item}</option>`
+            })
+
+            municipalityOption.innerHTML = kavreMunicipality;
+    }
+})
